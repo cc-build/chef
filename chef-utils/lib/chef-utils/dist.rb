@@ -4,20 +4,20 @@ module ChefUtils
   module Dist
     class Apply
       # The chef-apply product name
-      PRODUCT = "Chef Infra Apply"
+      PRODUCT = "Cinc Apply"
 
       # The chef-apply binary
-      EXEC = "chef-apply"
+      EXEC = "cinc-apply"
     end
 
     class Automate
       # name of the automate product
-      PRODUCT = "Chef Automate"
+      PRODUCT = "Cinc Dashboard"
     end
 
     class Cli
       # the chef-cli product name
-      PRODUCT = "Chef CLI"
+      PRODUCT = "Cinc CLI"
 
       # the chef-cli gem
       GEM = "chef-cli"
@@ -25,42 +25,42 @@ module ChefUtils
 
     class Habitat
       # name of the Habitat product
-      PRODUCT = "Chef Habitat"
+      PRODUCT = "Biome"
 
       # A short designation for the product
-      SHORT = "habitat"
+      SHORT = "biome"
 
       # The hab cli binary
-      EXEC = "hab"
+      EXEC = "bio"
     end
 
     class Infra
       # When referencing a product directly, like Chef (Now Chef Infra)
-      PRODUCT = "Chef Infra Client"
+      PRODUCT = "Cinc Client"
 
       # A short designation for the product, used in Windows event logs
       # and some nomenclature.
-      SHORT = "chef"
+      SHORT = "cinc"
 
       # The client's alias (chef-client)
-      CLIENT = "chef-client"
+      CLIENT = "cinc-client"
 
       # The chef executable, as in `chef gem install` or `chef generate cookbook`
-      EXEC = "chef"
+      EXEC = "cinc"
 
       # The chef-shell executable
-      SHELL = "chef-shell"
+      SHELL = "cinc-shell"
 
       # Configuration related constants
       # The chef-shell configuration file
-      SHELL_CONF = "chef_shell.rb"
+      SHELL_CONF = "cinc_shell.rb"
 
       # The user's configuration directory
-      USER_CONF_DIR = ".chef"
+      USER_CONF_DIR = ".cinc"
 
       # The suffix for Chef's /etc/chef, /var/chef and C:\\Chef directories
       # "chef" => /etc/cinc, /var/cinc, C:\\cinc
-      DIR_SUFFIX = "chef"
+      DIR_SUFFIX = "cinc"
 
       # The client's gem
       GEM = "chef"
@@ -68,25 +68,25 @@ module ChefUtils
 
     class Inspec
       # The InSpec product name
-      PRODUCT = "Chef InSpec"
+      PRODUCT = "Cinc Auditor"
 
       # The inspec binary
-      EXEC = "inspec"
+      EXEC = "cinc-auditor"
     end
 
     class Org
       # product Website address
-      WEBSITE = "https://chef.io"
+      WEBSITE = "https://cinc.sh"
 
       # The downloads site
-      DOWNLOADS_URL = "downloads.chef.io"
+      DOWNLOADS_URL = "downloads.cinc.sh"
 
       # The legacy conf folder: C:/opscode/chef. Specifically the "opscode" part
       # DIR_SUFFIX is appended to it in code where relevant
-      LEGACY_CONF_DIR = "opscode"
+      LEGACY_CONF_DIR = "cincproject"
 
       # Enable forcing Chef EULA
-      ENFORCE_LICENSE = true
+      ENFORCE_LICENSE = false
 
       # product patents page
       PATENTS = "https://www.chef.io/patents"
@@ -95,37 +95,37 @@ module ChefUtils
       KNIFE_DOCS = "https://docs.chef.io/workstation/knife/"
 
       # the name of the overall infra product
-      PRODUCT = "Chef Infra"
+      PRODUCT = "Cinc"
     end
 
     class Server
       # The name of the server product
-      PRODUCT = "Chef Infra Server"
+      PRODUCT = "Cinc Server"
 
       # The server's configuration directory
-      CONF_DIR = "/etc/chef-server"
+      CONF_DIR = "/etc/cinc-server"
 
       # The servers's alias (chef-server)
-      SERVER = "chef-server"
+      SERVER = "cinc-server"
 
       # The server's configuration utility
-      SERVER_CTL = "chef-server-ctl"
+      SERVER_CTL = "cinc-server-ctl"
     end
 
     class Solo
       # Chef-Solo's product name
-      PRODUCT = "Chef Infra Solo"
+      PRODUCT = "Cinc Solo"
 
       # The chef-solo executable (legacy local mode)
-      EXEC = "chef-solo"
+      EXEC = "cinc-solo"
     end
 
     class Workstation
       # The full marketing name of the product
-      PRODUCT = "Chef Workstation"
+      PRODUCT = "Cinc Workstation"
 
       # The suffix for Chef Workstation's /opt/chef-workstation or C:\\opscode\chef-workstation
-      DIR_SUFFIX = "chef-workstation"
+      DIR_SUFFIX = "cinc-workstation"
 
       # Workstation banner/help text
       DOCS = "https://docs.chef.io/workstation/"
@@ -133,10 +133,10 @@ module ChefUtils
 
     class Zero
       # chef-zero executable
-      PRODUCT = "Chef Infra Zero"
+      PRODUCT = "Cinc Zero"
 
       # The chef-zero executable (local mode)
-      EXEC = "chef-zero"
+      EXEC = "cinc-zero"
     end
   end
 end
