@@ -4,59 +4,59 @@ module ChefUtils
   module Dist
     class Apply
       # The chef-apply product name
-      PRODUCT = "Chef Infra Apply"
+      PRODUCT = "Cinc Apply"
 
       # The chef-apply binary
-      EXEC = "chef-apply"
+      EXEC = "cinc-apply"
     end
 
     class Automate
       # name of the automate product
-      PRODUCT = "Chef Automate"
+      PRODUCT = "Cinc Dashboard"
     end
 
     class Infra
       # When referencing a product directly, like Chef (Now Chef Infra)
-      PRODUCT = "Chef Infra Client"
+      PRODUCT = "Cinc Client"
 
       # A short designation for the product, used in Windows event logs
       # and some nomenclature.
-      SHORT = "chef"
+      SHORT = "cinc"
 
       # The client's alias (chef-client)
-      CLIENT = "chef-client"
+      CLIENT = "cinc-client"
 
       # The chef executable, as in `chef gem install` or `chef generate cookbook`
-      EXEC = "chef"
+      EXEC = "cinc"
 
       # The chef-shell executable
-      SHELL = "chef-shell"
+      SHELL = "cinc-shell"
 
       # Configuration related constants
       # The chef-shell configuration file
-      SHELL_CONF = "chef_shell.rb"
+      SHELL_CONF = "cinc_shell.rb"
 
       # The user's configuration directory
-      USER_CONF_DIR = ".chef"
+      USER_CONF_DIR = ".cinc"
 
       # The suffix for Chef's /etc/chef, /var/chef and C:\\Chef directories
       # "chef" => /etc/cinc, /var/cinc, C:\\cinc
-      DIR_SUFFIX = "chef"
+      DIR_SUFFIX = "cinc"
     end
 
     class Org
       # product Website address
-      WEBSITE = "https://chef.io"
+      WEBSITE = "https://cinc.sh"
 
       # The downloads site
-      DOWNLOADS_URL = "downloads.chef.io"
+      DOWNLOADS_URL = "downloads.cinc.sh"
 
       # The legacy conf folder: C:/opscode/chef. Specifically the "opscode" part
       # DIR_SUFFIX is appended to it in code where relevant
-      LEGACY_CONF_DIR = "opscode"
+      LEGACY_CONF_DIR = "cincproject"
 
       # Enable forcing Chef EULA
-      ENFORCE_LICENSE = true
+      ENFORCE_LICENSE = false
 
       # product patents page
       PATENTS = "https://www.chef.io/patents"
@@ -67,24 +67,24 @@ module ChefUtils
 
     class Server
       # The name of the server product
-      PRODUCT = "Chef Infra Server"
+      PRODUCT = "Cinc Server"
 
       # The server's configuration directory
-      CONF_DIR = "/etc/chef-server"
+      CONF_DIR = "/etc/cinc-server"
 
       # The servers's alias (chef-server)
-      SERVER = "chef-server"
+      SERVER = "cinc-server"
 
       # The server's configuration utility
-      SERVER_CTL = "chef-server-ctl"
+      SERVER_CTL = "cinc-server-ctl"
     end
 
     class Solo
       # Chef-Solo's product name
-      PRODUCT = "Chef Infra Solo"
+      PRODUCT = "Cinc Solo"
 
       # The chef-solo executable (legacy local mode)
-      EXEC = "chef-solo"
+      EXEC = "cinc-solo"
     end
 
     class Workstation
@@ -94,10 +94,10 @@ module ChefUtils
 
     class Zero
       # chef-zero executable
-      PRODUCT = "Chef Infra Zero"
+      PRODUCT = "Cinc Zero"
 
       # The chef-zero executable (local mode)
-      EXEC = "chef-zero"
+      EXEC = "cinc-zero"
     end
   end
 end
