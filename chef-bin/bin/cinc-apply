@@ -1,8 +1,10 @@
 #!/usr/bin/env ruby
 #
-# Author:: Jay Mundrawala (<jdm@chef.io>)
+# ./chef-apply - Run a single chef recipe
 #
-# Copyright:: 2014-2018, Chef Software, Inc.
+# Author:: Bryan W. Berry (<bryan.berry@gmail.com>)
+# Copyright:: Copyright 2012-2016, Bryan W. Berry
+# License:: Apache License, Version 2.0
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,20 +17,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
-
-# Note:
-# The file is used by appbundler to generate a ruby file that
-# we can execute using the correct gems. The batch file we
-# generate will call that file, and will be registered as
-# a windows service.
 
 $:.unshift(File.join(__dir__, "..", "lib"))
-require "chef"
-require "chef/application/windows_service"
+require "chef/application/apply"
 
-if Chef::Platform.windows?
-  Chef::Application::WindowsService.mainloop
-else
-  puts "chef-windows-service is only available on Windows platforms."
-end
+Chef::Application::Apply.new.run(enforce_license: false)

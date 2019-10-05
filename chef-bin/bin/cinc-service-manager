@@ -34,5 +34,5 @@ if Chef::Platform.windows?
   }
   Chef::Application::WindowsServiceManager.new(chef_client_service).run
 else
-  puts "chef-service-manager is only available on Windows platforms."
+  puts "cinc-service-manager is only available on Windows platforms."
 end
