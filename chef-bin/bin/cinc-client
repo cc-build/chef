@@ -22,4 +22,4 @@ $:.unshift(File.join(__dir__, "..", "lib"))
 require "chef"
 require "chef/application/client"
 
-Chef::Application::Client.new.run(enforce_license: true)
+Chef::Application::Client.new.run(enforce_license: false)

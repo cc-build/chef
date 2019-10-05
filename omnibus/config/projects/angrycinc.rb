@@ -1,5 +1,6 @@
 #
 # Copyright:: Copyright (c) Chef Software Inc.
+# Copyright:: 2019-2020, Cinc Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,23 +21,23 @@
 # `config/project/chef.rb`.
 #
 current_file = __FILE__
-chef_project_contents = IO.read(File.expand_path("chef.rb", __dir__))
+chef_project_contents = IO.read(File.expand_path("../cinc.rb", __dir__))
 instance_eval chef_project_contents
 
-name "angrychef"
-friendly_name "Angry Chef Client"
+name "angrycinc"
+friendly_name "Angry Cinc Client"
 
 if windows?
   # NOTE: Ruby DevKit fundamentally CANNOT be installed into "Program Files"
   #       Native gems will use gcc which will barf on files with spaces,
   #       which is only fixable if everyone in the world fixes their Makefiles
-  install_dir "#{default_root}/opscode/#{name}"
-  package_name "angrychef"
+  install_dir "#{default_root}/cinc-project/#{name}"
+  package_name "angrycinc"
 else
   install_dir "#{default_root}/#{name}"
 end
 
-resources_path "#{resources_path}/../chef"
+resources_path "#{resources_path}/../cinc"
 
 msi_upgrade_code = "D7FDDC1A-7668-404E-AD2F-61F875632A9C"
-project_location_dir = "angrychef"
+project_location_dir = "angrycinc"
