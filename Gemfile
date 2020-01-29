@@ -30,8 +30,12 @@ gem "chef-telemetry", ">=1.0.8" # 1.0.8 removes the http dep
 group(:omnibus_package) do
   gem "appbundler"
   gem "rb-readline"
-  gem "inspec-core-bin", "~> 4.24" # need to provide the binaries for inspec
+  gem "inspec-core", "~> 4.24",
+    source: "https://packagecloud.io/cinc-project/stable"
+  gem "cinc-auditor-core-bin", "~> 4.24", # need to provide the binaries for inspec
+    source: "https://packagecloud.io/cinc-project/stable"
   gem "chef-vault"
+  gem "chef-zero", source: "https://packagecloud.io/cinc-project/stable"
 end
 
 group(:omnibus_package, :pry) do
