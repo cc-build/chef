@@ -1,9 +1,9 @@
-$pkg_name="chef-infra-client"
-$pkg_origin="chef"
+$pkg_name="cinc-infra-client"
+$pkg_origin="cinc"
 $pkg_version=(Get-Content $PLAN_CONTEXT/../VERSION)
-$pkg_description="Chef Infra Client is an agent that runs locally on every node that is under management by Chef Infra. This package is binary-only to provide Chef Infra Client executables. It does not define a service to run."
-$pkg_maintainer="The Chef Maintainers <maintainers@chef.io>"
-$pkg_upstream_url="https://github.com/chef/chef"
+$pkg_description="Cinc Client is an agent that runs locally on every node that is under management by Cinc. This package is binary-only to provide Cinc Client executables. It does not define a service to run."
+$pkg_maintainer="The Cinc Maintainers <maintainers@cins.sh>"
+$pkg_upstream_url="https://gitlab.com/cinc-project/distribution/client"
 $pkg_license=@("Apache-2.0")
 $pkg_filename="${pkg_name}-${pkg_version}.zip"
 $pkg_bin_dirs=@(
