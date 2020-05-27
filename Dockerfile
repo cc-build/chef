@@ -20,7 +20,7 @@ LABEL maintainer="Cinc Project <docker@cinc.sh>"
 ARG CHANNEL=stable
 ARG VERSION=16.13.16
 
-RUN wget "http://downloads.cinc.sh/files/${CHANNEL}/cinc/${VERSION}/el/7/cinc-${VERSION}-1.el7.x86_64.rpm" -O /tmp/cinc-client.rpm && \
+RUN wget "http://ftp-osl.osuosl.org/pub/cinc/files/${CHANNEL}/cinc/${VERSION}/el/7/cinc-${VERSION}-1.el7.x86_64.rpm" -O /tmp/cinc-client.rpm && \
     rpm2cpio /tmp/cinc-client.rpm | cpio -idmv && \
     rm -rf /tmp/cinc-client.rpm
 
