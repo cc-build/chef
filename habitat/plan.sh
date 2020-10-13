@@ -114,11 +114,6 @@ do_install() {
     done
   )
 
-  # Copy cinc-wrapper in place
-  cp "${SRC_PATH}/cinc/cinc-wrapper" "${pkg_prefix}/bin"
-  # Patch wrapper with pkd_prefix
-  sed -i "s#/opt/cinc#${pkg_prefix}#g" "${pkg_prefix}/bin/cinc-wrapper"
-
   wrapper_links="chef-apply chef-client chef-shell chef-solo inspec"
   link_target="cinc-wrapper"
   for link in $wrapper_links; do
