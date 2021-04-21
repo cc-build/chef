@@ -30,6 +30,13 @@ command = if File.basename($PROGRAM_NAME) == 'inspec'
 STDERR.puts "Redirecting to #{command}"
 
 cmd_dir = File.dirname(File.realpath($PROGRAM_NAME))
-cmd = Mixlib::ShellOut.new("#{cmd_dir}/#{command}", *ARGV, live_stream: STDOUT, timeout: 3600)
-cmd.run_command
-exit cmd.exitstatus
+
+# cinc-shell uses a tty so we need to use Kernel.exec to get this to work
+# https://gitlab.com/cinc-project/distribution/client/-/issues/30
+if command == 'cinc-shell'
+  Kernel.exec(command, *ARGV)
+else
+  cmd = Mixlib::ShellOut.new("#{cmd_dir}/#{command}", *ARGV, live_stream: STDOUT, timeout: 3600)
+  cmd.run_command
+  exit cmd.exitstatus
+end
