@@ -13,4 +13,5 @@ server-testing:
     CINC_REF: $CI_COMMIT_REF_NAME
   trigger:
     project: cinc-project/distribution/client
+    branch: cinc-16
     strategy: depend
